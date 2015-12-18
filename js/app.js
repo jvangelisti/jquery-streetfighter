@@ -26,8 +26,32 @@ $(document).ready(function() {
 	});
 });
 
+var xKeyDown = false;
+$(document).keydown(function (e) {
+    if (e.keyCode == 88 && !xKeyDown) {
+    	xKeyDown = true;
+    	playMusic();
+        $('.ryu-still').hide();
+        $('.ryu-cool').show();
+    }
+});
+$(document).keyup(function (e) {
+    if (e.keyCode == 88) {
+    	xKeyDown = false;
+    	$('#ryu-music')[0].pause();
+        $('.ryu-still').show();
+        $('.ryu-cool').hide();
+    }
+});
+
 function playHadouken () {
 	$('#hadouken-sound')[0].volume = 0.5;
 	$('#hadouken-sound')[0].load();
 	$('#hadouken-sound')[0].play();
+}
+
+function playMusic () {
+	$('#ryu-music')[0].volume = 0.1;
+	$('#ryu-music')[0].load();
+	$('#ryu-music')[0].play();
 }
