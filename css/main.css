@@ -1,6 +1,11 @@
+@font-face{
+	font-family: comical;
+	src: url('../fonts/animeace2_reg.otf');
+}
 body {
 	background-color: black;
 }
+
 .main {
 	background-color: white;
 	margin-top: 110px;
@@ -44,6 +49,28 @@ body {
 	top: 110px;
 	left: 440px;
 	float: left;
+}
+.how-to {
+	padding-top: .1rem;
+	font-family: comical;
+}
+
+.how-to p {
+	width: 50%;
+	color: black;
+	font-size: 24px;
+	line-height: 45px;
+}
+
+.how-to p + p {
+	margin-left: 475px;
+}
+
+.how-to p + p + p {
+	margin-left: 100px;
+}
+.middle-text {
+	text-align: right;
 }
 .ryu-cool {
 	background-image: url('../images/ryu-cool.gif');

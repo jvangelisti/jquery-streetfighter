@@ -34,8 +34,8 @@ $(document).keydown(function (e) {
         $('.ryu-still').hide();
         $('.ryu-cool').show();
     }
-});
-$(document).keyup(function (e) {
+})
+.keyup(function (e) {
     if (e.keyCode == 88) {
     	xKeyDown = false;
     	$('#ryu-music')[0].pause();
